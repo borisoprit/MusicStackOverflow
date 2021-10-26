@@ -19,7 +19,11 @@ namespace MusicStackOverflow
           
 
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-
+            player.PlaybackEnded += (sender,e)=>
+{
+     btnPlay.IsVisible = true;
+     btnpause.IsVisible = false;
+};
             player.Load("Diminished.mp3");
 
 
@@ -40,8 +44,8 @@ namespace MusicStackOverflow
 
         private void BtnPlayClicked(object sender, EventArgs e)
         {
-            btnPause.IsVisible = true;
-            btnPlay.IsVisible = false;
+          // btnPause.IsVisible = true;
+           // btnPlay.IsVisible = false;
             Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Play();
           
         }
