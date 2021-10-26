@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicStackOverflow.LibraryAudioPage"
+              Title="Shared Audio">
+    
+    
+    <StackLayout Orientation="Vertical" Spacing="5" Margin="10">
+       
+
+        <Button x:Name="btnPlay" Text="Play" BorderColor="Green" />
+        <Button x:Name="btnPause" Text="Pause" BorderColor="Blue" />
+        <Button x:Name="btnStop" Text="Stop" BorderColor="Red" />
+
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MusicStackOverflow.HeadProjectAudioPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton
+                x:Name="btnPlay"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Play.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+            <ImageButton
+                x:Name="btnPause"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="pause.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+            <Label
+                HorizontalOptions="Start"
+                Text="Loop:"
+                VerticalOptions="Center" />
+            <Switch
+                x:Name="switchLoop"
+                HorizontalOptions="Start"
+                IsToggled="False"
+                VerticalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
