@@ -16,15 +16,17 @@ namespace MusicStackOverflow
         {
             InitializeComponent();
 
-          
+            picker.SelectedItem = "running.mp3"; ///////// You must selected before start if not a error
+
 
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.PlaybackEnded += (sender,e)=>
 {
      btnPlay.IsVisible = true;
-     btnpause.IsVisible = false;
+     btnPause.IsVisible = false;
 };
-            player.Load("Diminished.mp3");
+            //   player.Load("running.mp3"); //// change this to picker
+            player.Load(picker.SelectedItem.ToString());
 
 
             btnPlay.Clicked += BtnPlayClicked;
@@ -44,8 +46,8 @@ namespace MusicStackOverflow
 
         private void BtnPlayClicked(object sender, EventArgs e)
         {
-          // btnPause.IsVisible = true;
-           // btnPlay.IsVisible = false;
+            btnPause.IsVisible = true;
+            btnPlay.IsVisible = false;
             Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Play();
           
         }
@@ -56,5 +58,10 @@ namespace MusicStackOverflow
             Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Pause();
         }
 
+        private void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(picker.SelectedItem.ToString());
+        }
     }
 }

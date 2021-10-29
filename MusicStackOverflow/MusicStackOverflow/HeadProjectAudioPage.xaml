@@ -19,6 +19,17 @@
                 Source="pause.png"
                 VerticalOptions="Center"
                 WidthRequest="50" />
+            <Picker
+            x:Name="picker"
+            HorizontalTextAlignment="Center"
+            SelectedIndexChanged="picker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>running.mp3</x:String>
+                        <x:String>Diminished.mp3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <Label
                 HorizontalOptions="Start"
                 Text="Loop:"
