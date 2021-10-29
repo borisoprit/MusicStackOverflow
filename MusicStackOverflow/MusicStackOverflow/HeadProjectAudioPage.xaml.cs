@@ -30,8 +30,11 @@ namespace MusicStackOverflow
 
 
             btnPlay.Clicked += BtnPlayClicked;
+            btnPlaytwo.Clicked += BtnPlaytwoClicked;
+            btnPlaythree.Clicked += BtnPlaythreeClicked;
             btnPause.Clicked += BtnPauseClicked;
             switchLoop.Toggled += SwitchLoopToggled;
+            btnStop.Clicked += BtnStopClicked;
         }
         protected override void OnAppearing()
         {
@@ -46,10 +49,19 @@ namespace MusicStackOverflow
 
         private void BtnPlayClicked(object sender, EventArgs e)
         {
-            btnPause.IsVisible = true;
-            btnPlay.IsVisible = false;
+            picker.SelectedItem = "running.mp3";
             Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Play();
-          
+        }
+        private void BtnPlaytwoClicked(object sender, EventArgs e)
+        {
+            picker.SelectedItem = "Drup.mp3";
+            Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Play();
+        }
+
+        private void BtnPlaythreeClicked(object sender, EventArgs e)
+        {
+            picker.SelectedItem = "Diminished.mp3";
+            Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Play();
         }
         private void BtnPauseClicked(object sender, EventArgs e)
         {
@@ -57,7 +69,10 @@ namespace MusicStackOverflow
             btnPause.IsVisible = false;
             Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Pause();
         }
-
+        private void BtnStopClicked(object sender, EventArgs e)
+        {
+            Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current.Stop();
+        }
         private void picker_SelectedIndexChanged(object sender, EventArgs e)
         {
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;

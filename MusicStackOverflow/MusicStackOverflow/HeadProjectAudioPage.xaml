@@ -12,6 +12,20 @@
                 Source="Play.png"
                 VerticalOptions="Center"
                 WidthRequest="50" />
+               <ImageButton
+                x:Name="btnPlaytwo"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Play.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
+            <ImageButton
+                x:Name="btnPlaythree"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Source="Play.png"
+                VerticalOptions="Center"
+                WidthRequest="50" />
             <ImageButton
                 x:Name="btnPause"
                 HeightRequest="50"
@@ -19,6 +33,7 @@
                 Source="pause.png"
                 VerticalOptions="Center"
                 WidthRequest="50" />
+            <Button x:Name="btnStop" Text="Stop" BorderColor="Red" />
             <Picker
             x:Name="picker"
             HorizontalTextAlignment="Center"
@@ -26,6 +41,7 @@
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>running.mp3</x:String>
+                        <x:String>Drup.mp3</x:String>
                         <x:String>Diminished.mp3</x:String>
                     </x:Array>
                 </Picker.ItemsSource>

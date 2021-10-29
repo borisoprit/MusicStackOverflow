@@ -91,7 +91,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Drup.mp3" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicStackOverflow\MusicStackOverflow.csproj">
       <Project>{DACCFE2F-843B-40D8-B61F-B146EB5BA2FA}</Project>
