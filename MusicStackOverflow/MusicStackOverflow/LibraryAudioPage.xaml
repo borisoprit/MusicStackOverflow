@@ -11,8 +11,18 @@
         <Button x:Name="btnPlay" Text="Play" BorderColor="Green" />
         <Button x:Name="btnPause" Text="Pause" BorderColor="Blue" />
         <Button x:Name="btnStop" Text="Stop" BorderColor="Red" />
+        <Picker
+            x:Name="picker"
+            HorizontalTextAlignment="Center"
+            SelectedIndexChanged="picker_SelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>running.mp3</x:String>
+                    <x:String>Diminished.mp3</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
 
-        
     </StackLayout>
 
 </ContentPage>

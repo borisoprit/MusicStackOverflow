@@ -19,10 +19,14 @@ namespace MusicStackOverflow
         public LibraryAudioPage()
         {
             InitializeComponent();
+            picker.SelectedItem = "running.mp3"; ///////// You must selected before start if not a error
+
 
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
-            player.Load("Diminished.mp3");
+            //   player.Load("running.mp3"); //// change this to picker
+            player.Load(picker.SelectedItem.ToString());
+
 
             btnPlay.Clicked += BtnPlayClicked;
             btnPause.Clicked += BtnPauseClicked;
@@ -54,6 +58,12 @@ namespace MusicStackOverflow
             var stream = assembly.GetManifestResourceStream("SAPlayerSample." + filename);
 
             return stream;
+        }
+
+        private void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(picker.SelectedItem.ToString());
         }
     }
 }
